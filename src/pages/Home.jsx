@@ -7,6 +7,9 @@ import { LuShoppingCart } from "react-icons/lu";
 import { GrLineChart } from "react-icons/gr";
 import { CiMenuKebab } from "react-icons/ci";
 import PieChartWithCenterLabel from "../utils/PieChartWithCenterLabel";
+import SeriesFormatter from "../utils/SeriesFormatter";
+import LegendStyleSeries from "../utils/LegendStyleSeries";
+import FormatterDemo from "../utils/FormatterDemo";
 
 const items = [
   {
@@ -58,13 +61,19 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="w-full h-[320px]  rounded-2xl bg-neutral-800 ">
+          <div className="w-full h-[320px] flex  justify-center  rounded-2xl text-white bg-neutral-800 ">
+            <p className="pt-12 px-5 text-xl text-gray-500">Devices</p>
             <PieChartWithCenterLabel />
+            {/* <SeriesFormatter /> */}
           </div>
         </div>
         <div className="grid grid-cols-2 gap-5 mt-5">
-          <div className="w-full h-[320px]  rounded-2xl bg-neutral-800"></div>
-          <div className="w-full h-[320px]  rounded-2xl bg-neutral-800"></div>
+          <div className="w-full h-[320px]  rounded-2xl bg-neutral-800">
+            <LegendStyleSeries />
+          </div>
+          <div className="w-full h-[320px]  rounded-2xl bg-neutral-800">
+            <FormatterDemo />
+          </div>
         </div>
       </section>
 
